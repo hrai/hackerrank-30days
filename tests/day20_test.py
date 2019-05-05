@@ -1,12 +1,20 @@
 import unittest
-from exercises.day15 import Solution, Node
+from exercises.day20 import BubbleSort
 
 
 class Test(unittest.TestCase):
     def test(self):
-        mylist = Solution()
-        head = None
-        for i in [2,3,4,1]:
-            data = i
-            head = mylist.insert(head, data)
-        mylist.display(head);
+        sorter=BubbleSort()
+        a=[2,3,4,1]
+        n=len(a)
+
+        totalsorts = sorter.sort(n,a)
+        assert 7 == totalsorts
+
+    def test_3_items(self):
+        sorter=BubbleSort()
+        a=[3,2,1]
+        n=len(a)
+
+        totalsorts = sorter.sort(n,a)
+        assert 3 == totalsorts
