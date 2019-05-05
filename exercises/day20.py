@@ -13,7 +13,7 @@ class BubbleSort(object):
 
             for j in range(0, n - 1):
                 if a[j] > a[j + 1]:
-                    a[i], a[j] = a[j], a[i]
+                    a[j+1], a[j] = a[j], a[j+1]
                     swaps += 1
 
             totalSwaps += swaps
