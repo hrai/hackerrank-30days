@@ -14,4 +14,5 @@ class Test(unittest.TestCase):
 
 
         height = myTree.getHeight(root)
+        print(height)
         assert height == 4
