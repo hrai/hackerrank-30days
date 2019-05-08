@@ -21,26 +21,18 @@ class Solution:
     def levelOrder(self, root):
         # Write your code here
         q = [root] if root else []
-        nodes = []
-
-        if root is not None:
-            q.append(root)
-            nodes.append(str(root.data))
 
         while q:
             node = q.pop(0)
-            # del q[0]
 
-            print(len(q))
-
-            if node.left is not None:
+            if node.left:
                 q.append(node.left)
-                nodes.append(str(node.left.data))
-            if node.right is not None:
+            if node.right:
                 q.append(node.right)
-                nodes.append(str(node.right.data))
 
-        print(" ".join(nodes))
+            print(node.data, end=" ")
+
+
 
 
 T = int(input())
