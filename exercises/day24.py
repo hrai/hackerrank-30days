@@ -31,17 +31,19 @@ class Solution:
         while current and current.next:
             if current.data == current.next.data:
                 current.next=current.next.next
+                continue
 
             current = current.next
 
         return head
 
 mylist= Solution()
-T=int(input())
+# T=int(input())
+numList=[ 3, 9, 9, 11, 11, 11, 11, 89, 89, 100, 100, 101, 102, 103, 108, 200, 250, 250, 250, 250]
 
 head=None
-for i in range(T):
-    data=int(input())
+for i in numList:
+    data=i
     head=mylist.insert(head,data)    
 head=mylist.removeDuplicates(head)
 mylist.display(head); 
